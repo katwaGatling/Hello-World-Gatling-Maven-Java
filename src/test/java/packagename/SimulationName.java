@@ -15,7 +15,7 @@ public class SimulationName extends Simulation {
           .acceptHeader("application/json")
           .contentTypeHeader("application/json");
 
-  ScenarioBuilder users = scenario("Scenario 1").exec(http("Home").get("/computers"));
+  ScenarioBuilder users = scenario("My Scenario").exec(http("Request 1").get("/computers"));
 
   {
     setUp(users.injectOpen(atOnceUsers(vu))).protocols(httpProtocol);
