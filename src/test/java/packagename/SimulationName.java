@@ -12,8 +12,8 @@ public class SimulationName extends Simulation {
 
   HttpProtocolBuilder httpProtocol =
       http.baseUrl("https://computer-database.gatling.io")
-      .acceptHeader("application/json")
-      .contentTypeHeader("application/json");
+          .acceptHeader("application/json")
+          .contentTypeHeader("application/json");
 
   ScenarioBuilder users = scenario("Scenario 1").exec(http("Home").get("/computers"));
 
